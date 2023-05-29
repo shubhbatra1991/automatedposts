@@ -28,7 +28,7 @@ const Nav = () => {
           height={30}
           className='object-contain'
         />
-        <p className='logo_text'> AI Prompt</p>
+        <p className='logo_text'>Promptopia</p>
       </Link>
 
       {/* Desktop Navigation */}
@@ -99,7 +99,7 @@ const Nav = () => {
                   className='dropdown_link'
                   onClick={() => setToggleDropdown(false)}
                 >
-                  Create Post
+                  Create Prompt
                 </Link>
                 <button
                   type='button'
