@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // enable the /app router
-  appDir: true,
+  // appDir: true,
 
   // expose these packages to React Server Components
   serverExternalPackages: ["mongoose"],
