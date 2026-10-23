@@ -1,21 +1,18 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // enable the /app router
-  // appDir: true,
-
-  // expose these packages to React Server Components
+  // Keep Mongoose external to the server bundle
   serverExternalPackages: ["mongoose"],
 
+  // Only allow Google profile images
   images: {
-    domains: ["lh3.googleusercontent.com"],
-  },
-
-  webpack(config) {
-    config.experiments = {
-      ...config.experiments,
-      topLevelAwait: true,
-    };
-    return config;
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+        pathname: "/**",
+      },
+    ],
   },
 };
 
